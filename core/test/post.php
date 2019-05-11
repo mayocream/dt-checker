@@ -13,4 +13,4 @@ curl_setopt($ch, CURLINFO_HEADER_OUT,1);
 $output = curl_exec($ch);
 $headers = curl_getinfo($ch, CURLINFO_HEADER_OUT);
 
-printf($output);
+var_dump($output);
