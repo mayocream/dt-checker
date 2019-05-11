@@ -1,0 +1,12 @@
+学号（9位） 密码
+
+获取 cookie // post userPasswordValidate.portal
+
+get 对应系统id  // get mjkqcardUser.action
+	<input name="account"  type="hidden" value=23989 >
+
+查询 // post mjkqBrows.action
+
+1 不带 pageno param 查询 （第一页，总页数）
+
+2 循环查询 （2~总页数）
