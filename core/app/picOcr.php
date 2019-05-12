@@ -16,16 +16,16 @@ class picOcr {
 	}
 
 	private function getToken() {
-		if (file_exists($this->token_storage)) {
-			$token_storage = unserialize(file_get_contents(ROOT_PATH.'/storage/token.txt'));
-			if (strtotime('now') <= $token_storage['expires_time']) {
-				$this->getNewToken();
-			} else {
-				$this->token = $token_storage['token'];
-			}
-		} else {
+		// if (file_exists($this->token_storage)) {
+		// 	$token_storage = unserialize(file_get_contents(ROOT_PATH.'/storage/token.txt'));
+		// 	if (strtotime('now') <= $token_storage['expires_time']) {
+		// 		$this->getNewToken();
+		// 	} else {
+		// 		$this->token = $token_storage['token'];
+		// 	}
+		// } else {
 			$this->getNewToken();
-		}
+		// }
 	}
 
 	private function getNewToken() {
@@ -39,10 +39,10 @@ class picOcr {
 		]);
 		$json = json_decode($res->getBody()->getContents());
 		$this->token = $json->access_token;
-		file_put_contents(ROOT_PATH.'/storage/token.txt', serialize([
-			'token' => $this->token,
-			'expires_time' => strtotime('+'.$json->expires_in.'s')
-		]));
+		// file_put_contents(ROOT_PATH.'/storage/token.txt', serialize([
+		// 	'token' => $this->token,
+		// 	'expires_time' => strtotime('+'.$json->expires_in.'s')
+		// ]));
 	}
 
 	public function ocrPic($pic_base64) {
