@@ -90,7 +90,7 @@ class newSystemInfo {
 		$res = $client->Request('GET', 'http://paocao.cxxy.seu.edu.cn/Page/NewSetting/Handler/LoginHandler.ashx?cmd=GetValidateCode&time='.strtotime('now'));
 		$this->cookie = $res->getHeader('Set-Cookie')[0];
 		$pic_base64 = base64_encode($res->getBody()->getContents());
-		file_put_contents(ROOT_PATH.'/test/pic_base64.txt', $pic_base64);
+		//file_put_contents(ROOT_PATH.'/test/pic_base64.txt', $pic_base64);
 		$ocr = new \Dt\Ocr();
 		$vaildCode = $ocr->ocrPic($pic_base64);
 		//var_dump($vaildCode);
