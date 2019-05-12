@@ -1,6 +1,9 @@
-学号（9位） 密码
+﻿学号（9位） 密码
 
 获取 cookie // post userPasswordValidate.portal
+
+http://ecard.cxxy.seu.edu.cn/cxxyportalHome.action
+
 
 get 对应系统id  // get mjkqcardUser.action
 	<input name="account"  type="hidden" value=23989 >
@@ -10,3 +13,12 @@ get 对应系统id  // get mjkqcardUser.action
 1 不带 pageno param 查询 （第一页，总页数）
 
 2 循环查询 （2~总页数）
+
+
+----------
+
+新系统
+
+验证码 ocr http://paocao.cxxy.seu.edu.cn/Page/NewSetting/Handler/LoginHandler.ashx?cmd=GetValidateCode&time=1557683253816
+
+登录 http://paocao.cxxy.seu.edu.cn/Page/NewSetting/Handler/LoginHandler.ashx?cmd=Login

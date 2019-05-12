@@ -1,0 +1,11 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/http-foundation": "^4.2"
+    },
+	"autoload": {
+		"psr-4": {
+			"Dt\\": "app/"
+		}
+	}
+}

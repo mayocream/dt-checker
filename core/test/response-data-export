@@ -1,0 +1,267 @@
+
+
+
+<html>
+<head>
+<title></title>
+<style type="text/css">
+	<!--
+		body {
+			font-size: 12px;
+		}
+	-->
+	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="/css/style1/style.css" rel="stylesheet" type="text/css">
+<link href="/css/style1/shouyeziti.css" rel="stylesheet" type="text/css"><script language="javascript" src="/js/frame.js"></SCRIPT>
+<script language="javascript" src="/js/prototype.js"></script>
+<script language="javascript" src="/js/page.js"></script>
+</head>
+<script language="JavaScript" type="text/JavaScript">
+	// 指定处理翻页提交的函数
+	var pageHandle = "doQuery()";
+	function doQuery()
+	{  
+	   form1.action="mjkqBrows.action";
+	   form1.submit();
+	}
+	</script>
+<body  leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<form name="form1" method="post">
+<input name="id"  type="hidden" value= >
+<input name="startDate"  type="hidden" value= >
+<input name="endDate"  type="hidden" value= >
+<input name="account"  type="hidden" value=23990 >
+	<table width="99%"  cellspacing="0" cellpadding="0" >
+	<tr>
+		<td width="23%" height="33" align="center" background="/images/style1/biaotou1.jpg" class="baizi">门禁考勤流水 </td>
+		<td width="77%" align="left" background="/images/style1/biaotou2.jpg" class="baizi">&nbsp;</td>
+	</tr>
+	</table>
+	<table align="center" width="95%" border="0">
+	  <tr>
+		<td  >
+           <table width="681"  border="0" align="center" cellpadding="0" cellspacing="1" class="dangrichaxun">
+		        <tr class="bl"> 
+                  <td   class="neiwen" height="22">考勤发生时间</td>
+                   <td  class="neiwen" >考勤方式</td>
+                  <td  class="neiwen" >控制器号</td>
+                  <td class="neiwen" > 读卡器编号</td>
+                  <td  class="neiwen" >工作区名称</td>
+                </tr>
+                  
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-28 07:14:09</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-28 07:14:08</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-27 07:13:38</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-27 07:13:36</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-26 07:12:31</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >3</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-26 07:12:29</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >3</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-25 07:13:04</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >3</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-21 07:14:04</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >3</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-19 07:14:29</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >3</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-18 07:14:09</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-14 07:16:03</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >4</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-14 07:16:02</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >4</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-11 07:16:01</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >3</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-11 07:15:59</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >3</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-10 07:17:45</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+		
+		<tr class="listbg2">
+		
+      <td align="left">2018-12-10 07:17:44</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+           
+			<tr class="listbg">
+		  
+		
+      <td align="left">2018-12-07 07:16:50</td>
+        <td align="left">会议考勤进</td>
+      <td  align="left">5</td>
+      <td align="left" >2</td>
+      <td align="left" >学生早操考勤</td>
+   </tr>
+
+                <tr  class="bl">
+                  <td  colspan="7" class="neiwen" >
+   					<table border="0" cellpadding="0" width="100%" >
+<td align="right"><span  class="wenzi">每页显示<font color="#993333">17</font>条&nbsp;
+共<font color="#993333"><span id="pagetotal">3</span></font>页&nbsp;
+<font color="#993333">40</font>条记录&nbsp;
+当前第<font color="#993333" >1</font>页&nbsp;
+  
+          <!--1&nbsp;-->
+          
+          <!---->
+          <a onclick="javascript:locatePageOne(2)" style="cursor:hand"/>2&nbsp;</a>
+          <!---->
+          <a onclick="javascript:locatePageOne(3)" style="cursor:hand"/>3&nbsp;</a>
+
+<input name="pageno"  type="hidden" class="textfield" value="1" size="2" onchange="return checkPageNo();" onblur="return checkPageNo();"></td>
+
+</tr>
+</table>
+				   </td>
+                </tr>
+              </table>      
+        </td>
+     </tr>
+   </table>            
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+* {
+	font-family: sans-serif;
+}
+
+aside {
+    background: #1f8dd6;
+    margin: 1em 0;
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+}
+
+header h1 {
+	text-align: center;
+}
+
+main {
+	margin: 0 1em;
+}
+
+footer {
+	width: 90%;
+	position: fixed;
+	bottom: 1em;
+	text-align: center;
+	opacity: .7;
+}
+
+footer .right {
+	text-align: right;
+}
+
+form {
+	margin: 0 2em 0 1em;
+}
+
+input {
+	max-width: 100%;
+}
+
+button {
+	border-radius: 3px;
+}

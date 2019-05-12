@@ -1,45 +1,30 @@
 <?php
 
-namespace Checker;
+define('ROOT_PATH', dirname(__FILE__));
 
-class login {
+require ROOT_PATH.'/vendor/autoload.php';
 
-	public function __construct($cardNUM, $password) {
-		
-	}
-
-	private function validate() {
-
-	}
-
-	private function post() {
-
-	}
-}
-
-class Http {
-
-	private $url;
-
-	public function __construct($url) {
-		$this->url = $url;
-	}
-
-	public function post(array $header, array $data) {
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $this->url);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-		curl_setopt($ch, CURLOPT_HEADER,0);
-		curl_setopt($ch, CURLINFO_HEADER_OUT,1);
-		$output = curl_exec($ch);
-		$headers = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-	}
-}
+$app = new \Dt\interfaceApi();
 
 
-class getCookie {
+//$getId = new \Dt\getAccountId('230218235', '283117');
 
-}
+//$accountNUM = '230218236';
+//$password = '077670';
+
+// $accountNUM = '230218235';
+// $password = '283117';
+
+//$getId = new \Dt\getAccountId($accountNUM, $password);
+
+//var_dump($getId->accountId);
+//$select = new \Dt\selectInfo($getId->accountId);
+//var_dump($select->dt_count);
+
+//$ocr = new \Dt\Ocr();
+//echo $ocr->ocrPic('http://paocao.cxxy.seu.edu.cn/Page/NewSetting/Handler/LoginHandler.ashx?cmd=GetValidateCode&time=15576824036');
+
+//$newSystem = new \Dt\newSystemInfo($accountNUM, $password, $getId->accountId);
+
+//$select = new \Dt\selectAll($accountNUM, $password);
+//echo $select->dt_count;

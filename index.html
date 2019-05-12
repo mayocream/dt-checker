@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打卡计数 Beta</title>
+    <link href="assets/page.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/pure/1.0.0/pure-min.css">
+</head>
+<body id="layout">
+    <main id="main">
+        <header>
+            <h1>打卡计数 Beta</h1>
+            <h2>我是一个简洁的打卡计数器……</h2>
+        </header>
+
+        <div class="content">
+            <h3>查询</h3>
+            <aside>
+                <p>
+                    非盈利程序，不储存你的任何数据。<br>
+                    目前还在开发阶段，希望得到建议~ (๑•ㅂ•́)و✧
+                </p>
+            </aside>
+            <div class="pure-form pure-form-aligned" id="form">
+                <div class="pure-control-group">
+                    <label for="accountNUM">学号</label>
+                    <input type="text" name="accountNUM" placeholder="9位数学号">
+                </div>
+                <div class="pure-control-group">
+                    <label for="password">学号</label>
+                    <input type="password" name="password" placeholder="通常是身份证后6位">
+                </div>
+                <div class="pure-controls">
+                    <button onclick="login()">发送！</button>
+                </div>
+            </div>
+            <div id="result" style="display: none;">
+                <div class="pure-control-group">
+                    <label>姓名</label>
+                    <span id="name"></span>
+                </div>
+                <div class="pure-control-group">
+                    <label>学号</label>
+                    <span id="accountNUM"></span>
+                </div>
+                <div class="pure-control-group">
+                    <label>编号</label>
+                    <span id="accountId"></span>
+                </div>
+                <div class="pure-control-group">
+                    <label>打卡总数</label>
+                    <span id="dt_count"></span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>好累啊不想早起……</p>
+            <p class="right">Code from 久(aka 黄涵).</p>
+        </footer>
+    </main>
+
+<script src="assets/main.js"></script>
+<script src="https://cdn.bootcss.com/sweetalert/2.1.2/sweetalert.min.js"></script>
+</body>
+</html>
