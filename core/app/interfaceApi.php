@@ -44,7 +44,7 @@ class interfaceApi {
 		$response = new Response(
 			json_encode([
 				'success' => true,
-				'content' => $return_content
+				'content' => $this->return_content
 			]),
 			Response::HTTP_OK,
 			['Content-Type' => 'application/json']
