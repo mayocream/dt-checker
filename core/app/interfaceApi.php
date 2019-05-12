@@ -30,6 +30,7 @@ class interfaceApi {
 				'dt_count' => $select->dt_count,
 				'accountId' => $select->accountId
 			];
+			$this->return_content();
 		} catch (Exception $e) {
 			$this->error_msg = [
 				'error_code' => $e->getCode(),
