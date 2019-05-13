@@ -7,7 +7,7 @@ class dateHandle {
 	public static function handleData($dataArray) {
 		$data = [];
 		foreach ($dataArray as $date) {
-			preg_match('/([0-9]{4})-([0-9]{2})-([0-9]{2})/', $match);
+			$match = explode('-', $date);
 			$year = $match[1];
 			$month = $match[2];
 			$day = $match[3];
