@@ -43,6 +43,10 @@ button {
 	border-radius: 3px;
 }
 
+#result {
+	height: 90px;
+}
+
 .result {
 	width: 45%;
 	height: 2em;
