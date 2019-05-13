@@ -10,7 +10,14 @@ function login() {
 		method: "POST",
 		body: formData
 	}).then((response) => {
-		return response.json()
+		try {
+			return response.json()
+		} catch (err) {
+			swal("哪里出错了……", {
+				icon: "error"
+			});
+		}
+		
 	}).then((data) => {
 		if (data.success == true) {
 			swal.close();
