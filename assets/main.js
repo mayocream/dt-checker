@@ -60,6 +60,19 @@ $(function(){
 			success: function(data) {
 				swal.close();
 				console.log(data);
+				// 处理数据
+				// 每学期
+				data.content.period.forEach(school_yaer=>{
+					school_yaer.forEach(school_period=>{
+						period_count = school_period.length;
+						// html
+						html = '<tr><td>'+school_yaer+' 第 '+school_period+' 学期</td><td>'+period_count+'</td></tr>';
+						$("#result-period").append(html);
+					});
+				});
+				$("#result-period").append('<tr><td>学校补偿</td><td>11</td></tr>');
+				// 总共
+				$("#result-countAll").append(data.content.dt_count+11);
 			},
 			error: function(jqXHR) {
  				switch(jqXHR.status)
