@@ -6,7 +6,7 @@ class dateHandle {
 
 	public static function handleData($dataArray) {
 		$data = [];
-		foreach ($dataArray as $date) {
+		foreach ($dataArray as (string)$date) {
 			$match = explode('-', $date);
 			$year = $match[0];
 			$month = $match[1];
