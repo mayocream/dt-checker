@@ -15,9 +15,9 @@ class dateHandle {
 				$data[] = (int)$year;
 			}
 			if (!isset($data[$year][$month])) {
-				$data[$year] = (int)$month;
+				$data[$year][] = (int)$month;
 			}
-			$data[$year][$month] = (int)$day;
+			$data[$year][$month][] = (int)$day;
 		}
 		return $data;
 	}
