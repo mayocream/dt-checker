@@ -49,20 +49,37 @@ $(function(){
 	 		icon: "info"
 		});
 
-		$.post("http://cxxy-app.smartgslb.com/core/app.php", {
-			accountNUM: $("input[name='accountNUM']").val(),
-			password: $("input[name='password']").val()
-		}, function(data, status) {
-			if (status == "success") {
+		$.ajax({
+			type: "POST",
+			url: "https://cxxy-app.smartgslb.com/core/app.php",
+			data: {
+				accountNUM: $("input[name='accountNUM']").val(),
+				password: $("input[name='password']").val()
+			},
+			dataType: "json",
+			success: function(data) {
 				swal.close();
-				//data = $.parseJSON(data);
 				console.log(data);
-			} else {
-				swal("哪里出错了……", {
+			},
+			error: function(jqXHR) {
+ 				switch(jqXHR.status)
+ 				{
+ 				case 403:
+ 					msg = "账号密码好像哪里不对哦……？";
+ 					break;
+ 				case 500:
+ 					msg = "教务系统的服务器好像爆炸了……？";
+ 					break;
+ 				default:
+ 					msg = "我也不知道哪里出错了呢……";
+ 				}
+ 				swal(msg, {
  					icon: "error"
  				});
 			}
 		});
+
+
 	});
 
 

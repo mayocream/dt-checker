@@ -34,23 +34,55 @@
 								<h2>考勤打卡查询</h2>
 								<p>本程序通过登录教务系统进行考勤数据查询，因此需要你的学工号和登录密码。<br>
 								该程序非盈利，本站承诺不会保存你的任何信息，不会将你提供的数据他用。</p>
-								<form>
-									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
-											<label for="accountNUM">学工号</label>
-											<input type="text" name="accountNUM" placeholder="9 位校园卡号">
+								<div class="row" id="display-form">
+									<form>
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall">
+												<label for="accountNUM">学工号</label>
+												<input type="text" name="accountNUM" placeholder="9 位校园卡号">
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<label for="password">密码</label>
+												<input type="password" name="password" placeholder="通常为身份证后 6 位">
+											</div>
+											<div class="col-12">
+													<ul class="actions">
+														<li><input id="submit" type="button" value="查询" class="primary"></li>
+													</ul>
+											</div>
 										</div>
-										<div class="col-6 col-12-xsmall">
-											<label for="password">密码</label>
-											<input type="password" name="password" placeholder="通常为身份证后 6 位">
-										</div>
-										<div class="col-12">
-												<ul class="actions">
-													<li><input id="submit" type="button" value="查询" class="primary"></li>
-												</ul>
+									</form>
+								</div>
+								<div class="row" id="display-result">
+									<div class="col-6 col-12-medium">
+										<h3>个人信息</h3>
+										<ul class="alt">
+											<li>学工号<span id="result-accountNUM">978352430</span></li>
+											<li>系统编号<span id="result-accountId">230218</span></li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h3>打卡统计</h3>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>类别</th>
+														<th>次数</th>
+													</tr>
+												</thead>
+												<tbody id="result-period">
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="1"></td>
+														<td id="result-countAll"></td>
+													</tr>
+												</tfoot>
+											</table>
 										</div>
 									</div>
-								</form>
+								</div>
 							</section>
 
 					</div>
