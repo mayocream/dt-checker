@@ -8,9 +8,9 @@ class dateHandle {
 		$data = [];
 		foreach ($dataArray as $date) {
 			$match = explode('-', $date);
-			$year = $match[1];
-			$month = $match[2];
-			$day = $match[3];
+			$year = $match[0];
+			$month = $match[1];
+			$day = $match[2];
 			if (!isset($data[$year])) {
 				$data[] = (int)$year;
 			}
