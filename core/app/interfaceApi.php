@@ -47,7 +47,10 @@ class interfaceApi {
 				'content' => $this->return_content
 			]),
 			Response::HTTP_OK,
-			['Content-Type' => 'application/json']
+			[
+				'Content-Type' => 'application/json',
+				'Access-Control-Allow-Origin' => '*'
+			]
 		);
 		$response->send();
 		exit();
@@ -60,7 +63,10 @@ class interfaceApi {
 				'content' => $this->error_msg
 			]),
 			$this->error_msg['error_code'],
-			['Content-Type' => 'application/json']
+			[
+				'Content-Type' => 'application/json',
+				'Access-Control-Allow-Origin' => '*'
+			]
 		);
 		$response->send();
 		exit();

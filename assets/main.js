@@ -55,7 +55,7 @@ $(function(){
 		}, function(data, status) {
 			if (status == "success") {
 				swal.close();
-				data = $.parseJSON(data);
+				//data = $.parseJSON(data);
 				console.log(data);
 			} else {
 				swal("哪里出错了……", {
