@@ -6,7 +6,8 @@ function login() {
 		method: "POST",
 		body: formData
 	}).then((response) => {
-		let data = response.json();
+		return response.json()
+	}).then((data) => {
 		console.log(data);
 		console.log(data.content);
 		console.log(data.content.accountId);
