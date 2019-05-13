@@ -41,3 +41,12 @@ input {
 button {
 	border-radius: 3px;
 }
+
+.result {
+	width: 45%;
+	height: 2em;
+}
+
+#dt_count {
+	font-size: 1.5em;
+}

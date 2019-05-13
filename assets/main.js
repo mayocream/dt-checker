@@ -8,12 +8,9 @@ function login() {
 	}).then((response) => {
 		return response.json()
 	}).then((data) => {
-		console.log(data);
-		console.log(data.content);
-		console.log(data.content.accountId);
 		document.getElementById("accountNUM").innerHTML = document.getElementsByName("accountNUM")[0].value;
 		document.getElementById("accountId").innerHTML = data.content.accountId;
-		document.getElementById("dt_count").innerHTML = data.content.dt_count;
+		document.getElementById("dt_count").innerHTML = data.content.dt_count + 9;
 		document.getElementById("form").style.display = "none";
 		document.getElementById("result").style.display = "block";
 	})
