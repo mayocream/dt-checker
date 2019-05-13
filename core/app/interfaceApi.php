@@ -26,7 +26,7 @@ class interfaceApi {
 		try {
 			$select = new \Dt\selectAll($request->request->get('accountNUM'), $request->request->get('password'));
 			$this->return_content = [
-				'dateArray' => $select->dateArray,
+				'dateArray' => $select->dataArray,
 				'dt_count' => $select->dt_count,
 				'accountId' => $select->accountId
 			];
