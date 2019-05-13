@@ -8,5 +8,10 @@ function login() {
 	}).then((response) => {
 		let data = response.json();
 		console.log(data);
+		document.getElementsById("accountNUM").innerHTML = document.getElementsByName("accountNUM")[0].value;
+		document.getElementsById("accountId").innerHTML = data.content.accountId;
+		document.getElementsById("dt_count").innerHTML = data.content.dt_count;
+		document.getElementsById("form").style.display = "none";
+		document.getElementsById("result").style.display = " ";
 	})
 }
