@@ -11,6 +11,7 @@ class interfaceApi {
 	private $return_content;
 
 	public function __construct() {
+		$this->exception();
 		$this->loginRequest();
 	}
 
@@ -23,21 +24,23 @@ class interfaceApi {
 			];
 			$this->error();
 		}
-		try {
-			$select = new \Dt\selectAll($request->request->get('accountNUM'), $request->request->get('password'));
-			$this->return_content = [
-				'dateArray' => $select->dataArray,
-				'dt_count' => $select->dt_count,
-				'accountId' => $select->accountId
-			];
-			$this->return_content();
-		} catch (Exception $e) {
-			$this->error_msg = [
+		$select = new \Dt\selectAll($request->request->get('accountNUM'), $request->request->get('password'));
+		$this->return_content = [
+			'dateArray' => $select->dataArray,
+			'dt_count' => $select->dt_count,
+			'accountId' => $select->accountId
+		];
+		$this->return_content();
+	}
+
+	private function exception() {
+		set_exception_handler(function ($e) {
+	   		$this->error_msg = [
 				'error_code' => $e->getCode(),
 				'msg' =>$e->getMessage()
 			];
 			$this->error();
-		}
+		});
 	}
 
 	private function return_content() {
