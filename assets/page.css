@@ -45,8 +45,13 @@ button {
 .result {
 	width: 45%;
 	height: 2em;
+	float: left;
 }
 
-#dt_count {
-	font-size: 1.5em;
+.result span {
+	font-size: 1.3em;
+}
+
+#dt_count span{
+	font-size: 1.8em;
 }
