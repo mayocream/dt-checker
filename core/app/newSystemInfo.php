@@ -50,7 +50,7 @@ class newSystemInfo {
 				'page' => 1,
 				'rows' => 10000
 			],
-			'connect_timeout' => 5
+			'connect_timeout' => 9
 		]);
 		$data = json_decode($res->getBody()->getContents(), true);
 		//var_dump($data);
@@ -88,7 +88,7 @@ class newSystemInfo {
 
 	private function loginOnce() {
 		$client = new Client();
-		$res = $client->Request('GET', 'http://paocao.cxxy.seu.edu.cn/Page/NewSetting/Handler/LoginHandler.ashx?cmd=GetValidateCode&time='.strtotime('now'));
+		$res = $client->Request('GET', 'http://paocao.cxxy.seu.edu.cn/Page/NewSetting/Handler/LoginHandler.ashx?cmd=GetValidateCode&time='.strtotime('now'), ['connect_timeout' => 9]);
 		$this->cookie = $res->getHeader('Set-Cookie')[0];
 		$pic_base64 = base64_encode($res->getBody()->getContents());
 		//file_put_contents(ROOT_PATH.'/test/pic_base64.txt', $pic_base64);
@@ -103,7 +103,8 @@ class newSystemInfo {
 				'ValiCode' => $vaildCode
 			], 'headers' => [
 				'Cookie' => $this->cookie
-			]
+			],
+			'connect_timeout' => 9
 		]);
 		$result = json_decode($res->getBody()->getContents(), true)['success'];
 		//var_dump($result);

@@ -20,7 +20,7 @@ class getAccountId {
 				'Login.Token1' => $cardNUM,
 				'Login.Token2' => $password
 			],
-			'connect_timeout' => 5
+			'connect_timeout' => 9
 		]);
 		$cookie = $res->getHeader('Set-Cookie');
 		// testing
@@ -30,7 +30,7 @@ class getAccountId {
 				'headers' => [
 					'Cookie' => $cookie[0]
 				],
-				'connect_timeout' => 5
+				'connect_timeout' => 9
 			]);
 			$this->cookie = $res->getHeader('Set-Cookie')[0];
 			// testing
@@ -47,7 +47,7 @@ class getAccountId {
 			'headers' => [
 				'Cookie' => $this->cookie
 			],
-			'connect_timeout' => 5
+			'connect_timeout' => 9
 		]);
 		$body = $res->getBody()->getContents();
 		preg_match('/<input name="account"  type="hidden" value=([0-9]*) >/', $body, $match);
