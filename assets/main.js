@@ -6,6 +6,6 @@ function login() {
 		method: "POST",
 		body: formData
 	}).then((response) => {
-		let json = response.json();
+		let data = response.json();
 	})
 }
