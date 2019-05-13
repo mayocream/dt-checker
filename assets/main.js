@@ -7,5 +7,6 @@ function login() {
 		body: formData
 	}).then((response) => {
 		let data = response.json();
+		consolo.log(data);
 	})
 }
