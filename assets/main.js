@@ -8,6 +8,8 @@ function login() {
 	}).then((response) => {
 		let data = response.json();
 		console.log(data);
+		console.log(data.content);
+		console.log(data.content.accountId);
 		document.getElementById("accountNUM").innerHTML = document.getElementsByName("accountNUM")[0].value;
 		document.getElementById("accountId").innerHTML = data.content.accountId;
 		document.getElementById("dt_count").innerHTML = data.content.dt_count;
