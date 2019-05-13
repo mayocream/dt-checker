@@ -40,5 +40,6 @@ $dataArray = [
  "2018-09-18",
  "2018-09-17"
 ];
-$data = \Dt\dateHandle::handleData($dataArray);
+$dateHandle = new \Dt\dateHandle();
+$data = $dateHandle->createFromData($dataArray);
 var_dump($data);
