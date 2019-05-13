@@ -35,7 +35,8 @@ class picOcr {
 				'grant_type' => 'client_credentials',
 				'client_id' => $this->api_key,
 				'client_secret' => $this->secret_key
-			]
+			],
+			'connect_timeout' => 5
 		]);
 		$json = json_decode($res->getBody()->getContents());
 		$this->token = $json->access_token;
@@ -52,7 +53,8 @@ class picOcr {
 				'access_token' => $this->token
 			], 'form_params' => [
 				'image' => $pic_base64
-			]
+			],
+			'connect_timeout' => 5
 		]);
 		$result = json_decode($res->getBody()->getContents(), true);
 		return $result['words_result'][0]['words'];

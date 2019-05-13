@@ -19,7 +19,8 @@ class getAccountId {
 			'form_params' => [
 				'Login.Token1' => $cardNUM,
 				'Login.Token2' => $password
-			]
+			],
+			'connect_timeout' => 5
 		]);
 		$cookie = $res->getHeader('Set-Cookie');
 		// testing
@@ -28,7 +29,8 @@ class getAccountId {
 			$res = $client->Request('GET', 'http://ecard.cxxy.seu.edu.cn/cxxyportalHome.action', [
 				'headers' => [
 					'Cookie' => $cookie[0]
-				]
+				],
+				'connect_timeout' => 5
 			]);
 			$this->cookie = $res->getHeader('Set-Cookie')[0];
 			// testing
@@ -44,7 +46,8 @@ class getAccountId {
 		$res = $client->Request('GET', 'http://ecard.cxxy.seu.edu.cn/mjkqcardUser.action', [
 			'headers' => [
 				'Cookie' => $this->cookie
-			]
+			],
+			'connect_timeout' => 5
 		]);
 		$body = $res->getBody()->getContents();
 		preg_match('/<input name="account"  type="hidden" value=([0-9]*) >/', $body, $match);

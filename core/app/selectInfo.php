@@ -46,7 +46,8 @@ class selectInfo {
 			$form_params['pageno'] = $pageno;
 		}
 		$res = $client->Request('POST', 'http://ecard.cxxy.seu.edu.cn/mjkqBrows.action', [
-			'form_params' => $form_params
+			'form_params' => $form_params,
+			'connect_timeout' => 5
 		]);
 		$body = iconv('GB2312', 'UTF-8', $res->getBody()->getContents());
 		//var_dump($body);

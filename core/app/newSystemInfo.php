@@ -49,7 +49,8 @@ class newSystemInfo {
 				'LimitDept' => false,
 				'page' => 1,
 				'rows' => 10000
-			]
+			],
+			'connect_timeout' => 5
 		]);
 		$data = json_decode($res->getBody()->getContents(), true);
 		//var_dump($data);
