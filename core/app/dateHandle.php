@@ -13,9 +13,11 @@ class dateHandle {
 			$day = $match[2];
 			if (!isset($data[$year])) {
 				$data[] = $year;
+				$data[$year] = [];
 			}
 			if (!isset($data[$year][$month])) {
 				$data[$year][] = $month;
+				$data[$year][$month] = [];
 			}
 			$data[$year][$month][] = $day;
 		}
