@@ -12,12 +12,12 @@ class dateHandle {
 			$month = $match[1];
 			$day = $match[2];
 			if (!isset($data[$year])) {
-				$data[] = (int)$year;
+				$data[] = $year;
 			}
 			if (!isset($data[$year][$month])) {
-				$data[$year][] = (int)$month;
+				$data[$year][] = $month;
 			}
-			$data[$year][$month][] = (int)$day;
+			$data[$year][$month][] = $day;
 		}
 		return $data;
 	}
