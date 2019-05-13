@@ -15,6 +15,6 @@ function login() {
 		document.getElementById("accountId").innerHTML = data.content.accountId;
 		document.getElementById("dt_count").innerHTML = data.content.dt_count;
 		document.getElementById("form").style.display = "none";
-		document.getElementById("result").style.display = " ";
+		document.getElementById("result").style.display = "block";
 	})
 }
