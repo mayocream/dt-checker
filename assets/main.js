@@ -121,7 +121,18 @@ $(function(){
 			success: function(data) {
 				swal.close();
 				console.log(data);
+
+				// 显示开关
+				$("#display-form").hide();
+				$("#display-result").show();
+				$("#display-chart").show();
+
 				// 处理数据
+
+				$("#result-accountNUM").text($("input[name='accountNUM']").val());
+				$("#result-accountId").text(data.content.accountId);
+
+
 				// 每学期
 
 				// fforeach(data.content.period, function(school_yaer) {
@@ -156,7 +167,7 @@ $(function(){
 
 					 	//chart data
 					 	for (let index3 in data.content.period[index][index2].month) {
-					 		chartData.labels.push(index3);
+					 		chartData.labels.push(index3+' 月');
 					 		chartData.data.push(data.content.period[index][index2].month[index3]);
 					 	}
 
@@ -168,7 +179,7 @@ $(function(){
 					    data: {
 					        labels: chartData.labels,
 					        datasets: [{
-					            label: '# of Votes',
+					            label: '# 月打卡数',
 					            data: chartData.data,
 					            backgroundColor: [
 					                'rgba(255, 99, 132, 0.2)',

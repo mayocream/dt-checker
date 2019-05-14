@@ -22,7 +22,7 @@
 					<header id="header">
 						<h1>Go Order</h1>
 						<p>The X makes it sounds cool.<br>
-						欢迎加入官方群交流<a href>883908854</a>.</p>
+						欢迎加入官方群交流 <a href>883908854</a>.</p>
 					</header>
 
 				<!-- Main -->
@@ -53,12 +53,12 @@
 										</div>
 									</form>
 								</div>
-								<div class="row" id="display-result">
+								<div class="row" id="display-result" style="display: none;">
 									<div class="col-6 col-12-medium">
 										<h3>个人信息</h3>
 										<ul class="alt">
-											<li>学工号<span id="result-accountNUM">978352430</span></li>
-											<li>系统编号<span id="result-accountId">230218</span></li>
+											<li>学工号<span id="result-accountNUM" style="padding-left: 1em;">978352430</span></li>
+											<li>系统编号<span id="result-accountId" style="padding-left: 1em;">230218</span></li>
 										</ul>
 									</div>
 									<div class="col-6 col-12-medium">
@@ -82,9 +82,9 @@
 											</table>
 										</div>
 									</div>
-									<aside id="result-chart">
-										<div class="col-6 col-12-medium">
-											<canvas id="myChart" width="400" height="400"></canvas>
+									<aside id="display-chart" style="display: none;">
+										<div class="col-9 col-12-medium">
+											<canvas id="myChart" min-width="400px" min-height="400px" max-width="100%" max-height="100%"></canvas>
 										</div>
 									</aside>
 									
