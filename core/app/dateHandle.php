@@ -62,10 +62,10 @@ class dateHandle {
 			$year = $match[0];
 			$month = (int)$match[1];
 			//$day = $match[2];
-			if ($month >= 9 || $month <= 2) {
+			if ($month >= 9 || $month <= 1) {
 				$school_year = $year.'-'.($year+1);
 				// year fix
-				if ($month <= 2) {
+				if ($month <= 1) {
 					$school_year = ($year-1).'-'.$year;
 				}
 				$school_period = '1';
