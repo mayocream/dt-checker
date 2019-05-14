@@ -60,16 +60,25 @@ class dateHandle {
 		foreach ($dataArray as $date) {
 			$match = explode('-', $date);
 			$year = $match[0];
-			$month = $match[1];
-			$day = $match[2];
-			if ($month >= 8) {
+			$month = (int)$match[1];
+			//$day = $match[2];
+			if ($month >= 9 || $month <= 2) {
 				$school_year = $year.'-'.($year+1);
 				$school_period = '1';
 			} else {
 				$school_year = ($year-1).'-'.$year;
 				$school_period = '2';
 			}
-			$period[$school_year][$school_period][] = $date;
+			// mouth_all
+			if (!isset($period[$school_year][$school_period]['month'][$month])) {
+				$period[$school_year][$school_period]['month'][$month] = 0;
+			}
+			$period[$school_year][$school_period]['month'][$month] += 1;
+			// school_period_all
+			if (!isset($period[$school_year][$school_period]['all'])) {
+				$period[$school_year][$school_period]['all'] = 0;
+			}
+			$period[$school_year][$school_period]['all'] += 1;
 		}
 		return $period;
 	}

@@ -26,7 +26,7 @@ class interfaceApi {
 		}
 		$select = new \Dt\selectAll($request->request->get('accountNUM'), $request->request->get('password'));
 		$this->return_content = [
-			'period' => (array)\Dt\dateHandle::createFromData($select->dataArray),
+			'period' => \Dt\dateHandle::createFromData($select->dataArray),
 			'dateArray' => $select->dataArray,
 			'dt_count' => $select->dt_count,
 			'accountId' => $select->accountId

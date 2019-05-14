@@ -35,9 +35,16 @@
 // }
 
 
-function query() {
-	return false;
-	
+function fforeach(object, callback) {
+	// if (object.constructor === Array) {
+	// 	object.forEach(v=>{
+	// 		callback(v);
+	// 	});
+	// } else {
+		for (let index in object) {
+			callback(index);
+		}
+	// }
 }
 
 $(function(){
@@ -62,15 +69,45 @@ $(function(){
 				console.log(data);
 				// 处理数据
 				// 每学期
-				data.content.period.forEach(school_yaer=>{
-					school_yaer.forEach(school_period=>{
-						period_count = school_period.length;
-						// html
-						html = '<tr><td>'+school_yaer+' 第 '+school_period+' 学期</td><td>'+period_count+'</td></tr>';
-						$("#result-period").append(html);
-					});
-				});
-				$("#result-period").append('<tr><td>学校补偿</td><td>11</td></tr>');
+
+				// fforeach(data.content.period, function(school_yaer) {
+				// 	fforeach(school_yaer, function(school_period) {
+				// 		period_count = school_period.length;
+				// 		// html
+				// 		html = '<tr><td>'+school_yaer+' 第 '+school_period+' 学期</td><td>'+period_count+'</td></tr>';
+				// 		$("#result-period").append(html);
+				// 	})
+				// });
+
+				for (let index in data.content.period) {
+					for (let index2 in data.content.period[index]) {
+						console.log(index2);
+						console.log(data.content.period[index][index2]);
+						//console.log(Object.keys(data.content.period[index][index2])[0]);
+					
+					 // console.log(index);
+					 // console.log(data.content.period[index]);
+					 // console.log(Object.keys(data.content.period[index])[0]);
+						school_yaer = index;
+						school_period = index2;
+						period_count = data.content.period[index][index2].length;
+					 	// html
+					 	html = '<tr><td>'+school_yaer+' 第 '+school_period+' 学期</td><td>'+period_count+'</td></tr>';
+					 	$("#result-period").append(html);
+					}
+				}
+
+
+
+				// data.content.period.forEach(school_yaer=>{
+				// 	school_yaer.forEach(school_period=>{
+				// 		period_count = school_period.length;
+				// 		// html
+				// 		html = '<tr><td>'+school_yaer+' 第 '+school_period+' 学期</td><td>'+period_count+'</td></tr>';
+				// 		$("#result-period").append(html);
+				// 	});
+				// });
+				$("#result-period").append('<tr><td>故障补偿</td><td>11</td></tr>');
 				// 总共
 				$("#result-countAll").append(data.content.dt_count+11);
 			},
