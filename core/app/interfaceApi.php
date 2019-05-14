@@ -36,8 +36,13 @@ class interfaceApi {
 
 	private function exception() {
 		set_exception_handler(function ($e) {
+			if ($e->getCode() === 0) {
+				$error_code = 500;
+			} else {
+				$error_code = $e->getCode();
+			}
 	   		$this->error_msg = [
-				'error_code' => $e->getCode(),
+				'error_code' => $error_code,
 				'msg' =>$e->getMessage()
 			];
 			$this->error();
