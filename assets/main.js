@@ -90,7 +90,7 @@ $(function(){
 					 // console.log(Object.keys(data.content.period[index])[0]);
 						school_yaer = index;
 						school_period = index2;
-						period_count = data.content.period[index][index2].length;
+						period_count = data.content.period[index][index2].all;
 					 	// html
 					 	html = '<tr><td>'+school_yaer+' 第 '+school_period+' 学期</td><td>'+period_count+'</td></tr>';
 					 	$("#result-period").append(html);
